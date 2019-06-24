@@ -3,9 +3,7 @@ package com.example.museum_app
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.ly_museum.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,22 +11,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn1.setOnClickListener {
-            val intentExplicito = Intent(
-                this,
-                MuseumView::class.java
-            )
-            startActivity(intentExplicito)
+        btn_to_login.setOnClickListener {
+            goToLoginActivity()
         }
 
-        btn2.setOnClickListener {
-            val intentExplicito = Intent(
-                this,
-                EventView::class.java
-            )
-            startActivity(intentExplicito)
+        btn_to_signup.setOnClickListener {
+            goToSignUpActivity()
         }
 
+//
+//        btn2.setOnClickListener {
+//            val intentExplicito = Intent(
+//                this,
+//                EventView::class.java
+//            )
+//            startActivity(intentExplicito)
+//        }
+
+    }
+
+    fun goToLoginActivity(){
+        val intent = Intent(
+            this,
+            LoginActivity :: class.java
+        )
+        startActivity(intent)
+    }
+
+    fun goToSignUpActivity(){
+        val intent = Intent(
+            this,
+            SignUpActivity :: class.java
+        )
+        startActivity(intent)
     }
 
 }
