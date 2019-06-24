@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="wrap_content"
+                                             android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="414dp"
+            android:layout_height="269dp" app:srcCompat="@drawable/musuem3"
+            android:id="@+id/imageEvent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    />
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageEvent" android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" android:layout_marginBottom="5dp">
+        <TextView
+                android:text="Event name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvEventName" android:textColor="#FFFFFF"
+                android:textSize="22sp" android:textStyle="bold"/>
+        <TextView
+                android:text="Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvEventDate" android:textColor="#FFFFFF"/>
+        <TextView
+                android:text="Business hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/tvEventBusinessHours"
+                android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
