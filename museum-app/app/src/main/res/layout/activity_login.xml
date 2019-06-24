@@ -21,18 +21,17 @@
             android:id="@+id/ti_user" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/ti_password" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
-            android:textColorHint="@color/colorHeader" app:passwordToggleTint="@color/colorHeader"
-    >
+            android:textColorHint="@color/colorButtons" app:passwordToggleTint="@color/colorHeader"
+            android:backgroundTint="@color/colorButtons">
         <EditText android:id="@+id/input_user"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:inputType="text"
                   android:hint="Usuario" android:textColorHighlight="@color/colorHeader"
                   android:textColorLink="@color/colorHeader" android:textColor="@color/colorLightText"
-                  android:textColorHint="@color/colorHeader" android:textCursorDrawable="@color/colorHeader"
+                  android:textColorHint="@color/colorButtons" android:textCursorDrawable="@color/colorHeader"
                   android:shadowColor="@color/colorHeader"
-                  android:foregroundTint="@color/colorHeader" android:drawableTint="@color/colorHeader"
-                  android:backgroundTint="@color/colorHeader"/>
+                  android:backgroundTint="@color/colorButtons"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -41,25 +40,26 @@
             android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/button3"
             android:id="@+id/ti_password" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp" android:layout_marginStart="32dp"
-            android:backgroundTint="@color/colorHeader" android:textColorHint="@color/colorHeader">
+            android:backgroundTint="@color/colorButtons" android:textColorHint="@color/colorButtons">
         <EditText android:id="@+id/input_password"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:inputType="textPassword"
-                  android:hint="Contraseña" android:textColorHint="@color/colorHeader"
+                  android:hint="Contraseña" android:textColorHint="@color/colorButtons"
                   android:textColorHighlight="@color/colorHeader" android:textColor="@color/colorLightText"
-                  android:textCursorDrawable="@color/colorHeader" android:backgroundTint="@color/colorHeader"/>
+                  android:textCursorDrawable="@color/colorHeader" android:backgroundTint="@color/colorButtons"/>
     </android.support.design.widget.TextInputLayout>
 
 
     <Button
             android:text="Iniciar sesión"
             android:layout_width="0dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:id="@+id/btn_login"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="@color/colorButtons" android:textColor="@color/colorDarkText" android:textSize="24dp"/>
+            android:background="@color/colorButtons" android:textColor="@color/colorDarkText" android:textSize="24dp"
+            android:alpha="0.9"/>
     <Button
             android:text="Button"
             android:layout_width="wrap_content"
