@@ -32,6 +32,10 @@ class MuseumAdapter(private val museumList: ArrayList<Museum>,
             museumEventButton = view.findViewById(R.id.btnMuseumEvents)
             museumAddressButton = view.findViewById(R.id.btnMuseumAddress)
 
+            museumEventButton.setOnClickListener {
+                context.goToEvents()
+            }
+
         }
 
     }

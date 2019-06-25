@@ -1,5 +1,6 @@
 package com.example.museum_app
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
@@ -32,7 +33,13 @@ class MuseumView : AppCompatActivity() {
         recycler_view.adapter = museumAdapter
         recycler_view.itemAnimator = DefaultItemAnimator()
         recycler_view.layoutManager = LinearLayoutManager(activity)
+    }
 
-
+    fun goToEvents(){
+        val intentExplicito = Intent(
+            this,
+            EventView::class.java
+        )
+        startActivity(intentExplicito)
     }
 }

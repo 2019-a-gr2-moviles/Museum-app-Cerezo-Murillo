@@ -19,14 +19,6 @@ class MainActivity : AppCompatActivity() {
             goToSignUpActivity()
         }
 
-//
-//        btn2.setOnClickListener {
-//            val intentExplicito = Intent(
-//                this,
-//                EventView::class.java
-//            )
-//            startActivity(intentExplicito)
-//        }
 
     }
 
