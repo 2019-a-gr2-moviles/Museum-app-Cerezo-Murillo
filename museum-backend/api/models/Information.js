@@ -11,15 +11,16 @@ module.exports = {
 
     businessHours : {
       type : 'string',
-      maxLength : 20
+      maxLength : 128
     },
     businessDays : {
       type : 'string',
-      maxLength : 64
+      maxLength : 128
     },
     description : {
-      type : 'string',
-      maxLength : 280
+      type : 'json',
+      maxLength : 280,
+      columnName: 'description'
     },
     phoneNumber : {
       type : 'string',

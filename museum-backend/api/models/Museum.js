@@ -20,6 +20,12 @@ module.exports = {
     },
     museum_information_FK : {
       model : 'information'
+    },
+    museumPicFD : {
+      type : 'string'
+    },
+    museumPicURL : {
+      type : 'string'
     }
 
   },
