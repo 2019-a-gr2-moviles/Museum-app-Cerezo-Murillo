@@ -1,8 +1,9 @@
-package com.example.museum_app
+package com.example.museum_app.view
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.museum_app.R
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class SignUpActivity : AppCompatActivity() {
     fun goToMuseumActivity(){
         val intentExplicito = Intent(
             this,
-            MuseumView :: class.java
+            MuseumView:: class.java
         )
         startActivity(intentExplicito)
     }

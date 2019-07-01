@@ -1,8 +1,10 @@
-package com.example.museum_app
+package com.example.museum_app.view
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.museum_app.R
+import com.example.museum_app.model.Museum
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Museum.refreshList()
 
         btn_to_login.setOnClickListener {
             goToLoginActivity()
@@ -25,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     fun goToLoginActivity(){
         val intent = Intent(
             this,
-            LoginActivity :: class.java
+            LoginActivity:: class.java
         )
         startActivity(intent)
     }
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     fun goToSignUpActivity(){
         val intent = Intent(
             this,
-            SignUpActivity :: class.java
+            SignUpActivity:: class.java
         )
         startActivity(intent)
     }
