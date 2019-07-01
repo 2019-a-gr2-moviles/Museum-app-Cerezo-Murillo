@@ -1,4 +1,4 @@
-package com.example.museum_app
+package com.example.museum_app.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.museum_app.R
+import com.example.museum_app.model.Event
+import com.example.museum_app.view.EventView
 
 class EventAdapter(private val eventList: ArrayList<Event>,
                    private val context: EventView,
@@ -33,7 +36,7 @@ class EventAdapter(private val eventList: ArrayList<Event>,
     }
 
     override fun onBindViewHolder(
-        myViewHolder: EventAdapter.MyViewHolder,
+        myViewHolder: MyViewHolder,
         position: Int
     ) {
 
@@ -55,7 +58,7 @@ class EventAdapter(private val eventList: ArrayList<Event>,
         p0: ViewGroup,
         p1: Int
     ):
-            EventAdapter.MyViewHolder {
+            MyViewHolder {
         val itemView = LayoutInflater
             .from(p0.context)
             .inflate(

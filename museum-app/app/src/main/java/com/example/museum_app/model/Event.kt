@@ -1,4 +1,4 @@
-package com.example.museum_app
+package com.example.museum_app.model
 
 class Event(
     var eventImage:Int,

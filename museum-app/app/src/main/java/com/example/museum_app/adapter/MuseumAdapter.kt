@@ -1,4 +1,4 @@
-package com.example.museum_app
+package com.example.museum_app.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.museum_app.R
+import com.example.museum_app.model.Museum
+import com.example.museum_app.view.MuseumView
 
-class MuseumAdapter(private val museumList: ArrayList<Museum>,
+class MuseumAdapter(private val museumList: List<Museum>,
                     private val context: MuseumView,
                     private val recyclerView: RecyclerView
 ) : RecyclerView.Adapter<MuseumAdapter.MyViewHolder>() {
@@ -45,16 +48,16 @@ class MuseumAdapter(private val museumList: ArrayList<Museum>,
     }
 
     override fun onBindViewHolder(
-        myViewHolder: MuseumAdapter.MyViewHolder,
+        myViewHolder: MyViewHolder,
         position: Int
     ) {
 
         val museum = museumList[position]
 
-        myViewHolder.museumNameTextView.text = museum.museumName
-        myViewHolder.museumBusinessDaysTextView.text = museum.museumBusinessDays
-        myViewHolder.museumBusinessHoursTextView.text = museum.museumBusinessHours
-        myViewHolder.museumImageView.setImageResource(museum.museumImage)
+        myViewHolder.museumNameTextView.text = museum.name
+        myViewHolder.museumBusinessDaysTextView.text = museum.businessDays
+        myViewHolder.museumBusinessHoursTextView.text = museum.businessHours
+        myViewHolder.museumImageView.setImageBitmap(museum.image)
 
     }
 
@@ -62,7 +65,7 @@ class MuseumAdapter(private val museumList: ArrayList<Museum>,
         p0: ViewGroup,
         p1: Int
     ):
-            MuseumAdapter.MyViewHolder {
+            MyViewHolder {
         val itemView = LayoutInflater
             .from(p0.context)
             .inflate(
