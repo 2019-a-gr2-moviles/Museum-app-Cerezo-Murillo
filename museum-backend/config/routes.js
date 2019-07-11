@@ -2,7 +2,9 @@
 
 module.exports.routes = {
 
-  '/': { view: 'pages/homepage' },
+  '/': { 
+    view: 'pages/homepage' 
+  },
   'GET /allMuseums' :{
     action: 'museum/listAll'
   },
@@ -11,6 +13,9 @@ module.exports.routes = {
   },
   'GET /picture' : {
     action : 'museum/getPic'
+  },
+  'POST /login' : {
+    action : 'user/login'
   }
 
 };

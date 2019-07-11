@@ -24,8 +24,9 @@ module.exports = {
     museumPicFD : {
       type : 'string'
     },
-    museumPicURL : {
-      type : 'string'
+    events : {
+      collection : 'event',
+      via : 'museum_event_FK'
     }
 
   },

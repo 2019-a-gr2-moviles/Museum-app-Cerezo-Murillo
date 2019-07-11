@@ -67,7 +67,6 @@ module.exports = {
                         var baseUrl = sails.config.custom.baseUrl;
                         Museum.update(req.param('id'))
                             .set({
-                                museumPicURL: require('util').format('%s/picture/%s', baseUrl, req.param('id')),
                                 museumPicFD: archivosSubidos[0].fd
                             }).exec(function (err){
                                 if (err) return res.serverError(err);

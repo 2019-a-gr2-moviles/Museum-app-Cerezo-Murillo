@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"name":"José","lastName":"Murillo","emailAddress":"jsiajiw@hotmail.com","createdAt":1561403579936,"updatedAt":1561403579936,"id":1,"user_person_FK":null,"_id":1}
+{"$$deleted":true,"_id":1}
+{"name":"José","lastName":"Murillo","emailAddress":"jsiajiw@hotmail.com","createdAt":1561403579936,"updatedAt":1561403731679,"id":1,"user_person_FK":1,"_id":1}
