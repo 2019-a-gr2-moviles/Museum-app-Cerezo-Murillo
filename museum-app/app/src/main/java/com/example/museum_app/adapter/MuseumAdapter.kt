@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.museum_app.R
 import com.example.museum_app.model.Museum
 import com.example.museum_app.view.MuseumView
@@ -57,7 +58,7 @@ class MuseumAdapter(private val museumList: List<Museum>,
         myViewHolder.museumNameTextView.text = museum.name
         myViewHolder.museumBusinessDaysTextView.text = museum.businessDays
         myViewHolder.museumBusinessHoursTextView.text = museum.businessHours
-        myViewHolder.museumImageView.setImageBitmap(museum.image)
+        Glide.with(context).load(museum.image).into(myViewHolder.museumImageView)
 
     }
 

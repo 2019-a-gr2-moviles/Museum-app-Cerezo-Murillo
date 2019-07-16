@@ -9,8 +9,8 @@
             android:layout_height="269dp" app:srcCompat="@drawable/museum1"
             android:id="@+id/imageMuseum" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerInside"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="0dp"

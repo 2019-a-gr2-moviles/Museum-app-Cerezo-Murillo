@@ -18,11 +18,7 @@ class MuseumView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_museum_view)
-        Log.i("testingxd","antes")
-        Log.i("testingxd","despues")
         val lista = Museum.museums
-        Log.i("testingxd","finalmente")
-        Log.i("testingxd","${lista[0].image}")
         val recyclerView = rvMuseums
         startRecyclerView(lista,this,recyclerView)
 

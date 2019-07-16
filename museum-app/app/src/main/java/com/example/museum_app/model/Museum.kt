@@ -17,14 +17,10 @@ class Museum(
     var latitude : String
 ) {
 
-   var image : Bitmap? = null
+   var image : String
 
     init {
-        searchForImage()
-    }
-
-    fun searchForImage(){
-        image = adapter.getImage(id)
+        image = "http://192.168.0.8:1337/picture?id=$id"
     }
 
 

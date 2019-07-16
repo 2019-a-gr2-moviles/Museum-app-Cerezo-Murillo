@@ -34,7 +34,6 @@ class MuseumHttpAdapter {
                         Log.i("testingxd",data)
                         try {
                             val museumListAux = Klaxon().parseArray<Museum>(data)
-                            Log.i("testingxd","here we are")
                             museumListAux?.forEach {
                                 museumList!!.add(it)
                             }
@@ -45,30 +44,6 @@ class MuseumHttpAdapter {
                 }
             }
         return museumList
-    }
-
-    fun getImage(id : Int) : Bitmap? {
-        var x : Bitmap? = null
-        var currentUrl = "$url/picture?id=$id"
-        Log.i("testingxd", currentUrl)
-        val (request, response, result) = currentUrl.httpGet()
-            .header(Headers.CONTENT_TYPE, "image/jpg")
-            .responseString()
-        when(result){
-            is Result.Failure -> {
-                val ex =result.getException()
-                Log.i("http", "ErrorImage: ${ex.message}")
-            }
-            is Result.Success -> {
-                val data = result.get()
-                val input = data.toByteArray()
-                Log.i("testingxd", data)
-                Log.i("testingxd","$input")
-                x = BitmapFactory.decodeByteArray(input, 0, input.size)
-            }
-        }
-        Log.i("testingxd", "$x")
-        return x
     }
 
 }
