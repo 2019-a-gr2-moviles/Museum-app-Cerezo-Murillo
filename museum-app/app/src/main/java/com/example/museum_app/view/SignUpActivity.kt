@@ -1,7 +1,7 @@
 package com.example.museum_app.view
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.museum_app.R
 import kotlinx.android.synthetic.main.activity_sign_up.*

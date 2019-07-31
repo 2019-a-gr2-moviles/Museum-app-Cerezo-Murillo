@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -15,7 +15,7 @@
             android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:alpha="0.9"/>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/ti_user" android:layout_marginBottom="16dp"
@@ -32,9 +32,9 @@
                   android:textColorHint="@color/colorButtons" android:textCursorDrawable="@color/colorHeader"
                   android:shadowColor="@color/colorHeader"
                   android:backgroundTint="@color/colorButtons"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -48,7 +48,7 @@
                   android:hint="Contraseña" android:textColorHint="@color/colorButtons"
                   android:textColorHighlight="@color/colorHeader" android:textColor="@color/colorLightText"
                   android:textCursorDrawable="@color/colorHeader" android:backgroundTint="@color/colorButtons"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
@@ -77,4 +77,4 @@
             android:id="@+id/button3" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/button2" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

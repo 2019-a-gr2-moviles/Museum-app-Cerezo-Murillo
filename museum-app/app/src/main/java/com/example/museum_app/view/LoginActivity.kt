@@ -1,7 +1,7 @@
 package com.example.museum_app.view
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.museum_app.R

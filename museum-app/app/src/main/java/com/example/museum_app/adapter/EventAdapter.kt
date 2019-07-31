@@ -1,26 +1,28 @@
 package com.example.museum_app.adapter
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.museum_app.R
 import com.example.museum_app.model.Event
 import com.example.museum_app.view.EventView
 
 class EventAdapter(private val eventList: ArrayList<Event>,
                    private val context: EventView,
-                   private val recyclerView: RecyclerView
-) : RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
+                   private val recyclerView: androidx.recyclerview.widget.RecyclerView
+) : androidx.recyclerview.widget.RecyclerView.Adapter<EventAdapter.MyViewHolder>() {
 
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
 
         var eventNameTextView: TextView
         var eventBusinessHoursTextView: TextView
         var eventDateTextView: TextView
         var eventImageView: ImageView
+        var eventLy: ConstraintLayout
 
 
         init {
@@ -29,6 +31,7 @@ class EventAdapter(private val eventList: ArrayList<Event>,
             eventBusinessHoursTextView = view.findViewById(R.id.tvEventBusinessHours) as TextView
             eventDateTextView = view.findViewById(R.id.tvEventDate) as TextView
             eventImageView = view.findViewById(R.id.imageEvent) as ImageView
+            eventLy = view.findViewById(R.id.lyEvent) as ConstraintLayout
 
 
         }

@@ -1,12 +1,12 @@
 package com.example.museum_app.view
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import com.example.museum_app.adapter.MuseumAdapter
 import com.example.museum_app.R
@@ -26,24 +26,37 @@ class MuseumView : AppCompatActivity() {
     }
 
 
-    fun startRecyclerView(list: List<Museum>, activity: MuseumView, recycler_view: RecyclerView){
+    fun startRecyclerView(list: List<Museum>, activity: MuseumView, recycler_view: androidx.recyclerview.widget.RecyclerView){
         val museumAdapter = MuseumAdapter(
             list,
             activity,
             recycler_view
         )
         recycler_view.adapter = museumAdapter
-        recycler_view.itemAnimator = DefaultItemAnimator()
-        recycler_view.layoutManager = LinearLayoutManager(activity)
+        recycler_view.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        recycler_view.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
     }
 
 
 
-    fun goToEvents(){
+    fun goToEvents(museumId: Int){
         val intentExplicito = Intent(
             this,
             EventView::class.java
         )
+        intentExplicito.putExtra("museumId",museumId)
+        startActivity(intentExplicito)
+    }
+
+    fun goToMuseumAddress(lat:String, long: String, name:String){
+        val intentExplicito = Intent(
+            this,
+            MuseumAddressMapsActivity::class.java
+        )
+        intentExplicito.putExtra("museumLat",lat)
+        intentExplicito.putExtra("museumLong",long)
+        intentExplicito.putExtra("museumName",name)
+
         startActivity(intentExplicito)
     }
 
