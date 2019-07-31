@@ -23,7 +23,8 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
     >
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical" android:gravity="center_horizontal">
+                      android:orientation="vertical" android:gravity="center_horizontal"
+        >
             <TextView
                     android:text="Event Name"
                     android:layout_width="wrap_content"
@@ -57,7 +58,8 @@
             <TextView
                     android:text="$9.99"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/txtPriceEventDetail" android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content" android:id="@+id/txtPriceEventDetail"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:textColor="#13315C"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="16sp"/>
             <TextView
@@ -70,7 +72,8 @@
             <TextView
                     android:text="del 13 al 25 de junio"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/txtBusinessDaysEventDetail" android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content" android:id="@+id/txtBusinessDaysEventDetail"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:textColor="#13315C"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="16sp"/>
             <TextView
@@ -83,15 +86,18 @@
             <TextView
                     android:text="13 - 18 pm"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/txtBusinessHoursEventDetail" android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content" android:id="@+id/txtBusinessHoursEventDetail"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:textColor="#13315C"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="16sp"/>
             <TextView
                     android:text="Esta esuna descripcion del evento:"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/txtDescriptionEventDetail" android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content" android:id="@+id/txtDescriptionEventDetail"
+                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:textColor="#13315C"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="16sp"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="16sp"
+                    android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
