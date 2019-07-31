@@ -1,1 +1,3 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1562723935268,"updatedAt":1564596764732,"id":1,"name":"Museo Casa del Alabado","museumPicFD":"D:\\Documents\\GitHub\\museum-app\\museum-backend\\files\\d0b85dbf-b9ee-4c56-9d6a-88163f5200b7.jpg","museum_location_FK":2,"museum_information_FK":2,"_id":1}
+{"createdAt":1562724116108,"updatedAt":1564596773459,"id":2,"name":"Museo de Historia Natural Gustavo Orcés","museumPicFD":"D:\\Documents\\GitHub\\museum-app\\museum-backend\\files\\2e084344-f381-422a-86d8-3d44c9d6a800.jpg","museum_location_FK":1,"museum_information_FK":1,"_id":2}

@@ -1,4 +1,5 @@
 package com.example.museum_app.model
+import com.example.museum_app.view.MainActivity
 
 class Event(
     var id : Int,
@@ -13,7 +14,7 @@ class Event(
     var image : String
 
     init {
-        image = "http://192.168.0.8:1337/pictureEvent?id=$id"
+        image = "${MainActivity.url}/pictureEvent?id=$id"
     }
 
 }

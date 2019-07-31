@@ -1,3 +1,3 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"userName","unique":true,"sparse":false}}
-{"createdAt":1561403653012,"updatedAt":1561403702134,"id":1,"userName":"Jose7198","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$w9OETnsrIWlUZrcG$dmIDBR5S+yRwjSoqIWfn0Pgw$0DnUTcs9QzpGffzDdTlniQ","user_person_FK":1,"_id":1}
+{"createdAt":1564593115356,"updatedAt":1564596432227,"id":2,"userName":"admin","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$V+bxGyzd1BzbV15x$afk9RYbI2kvP9Q==$qleh5uEimOvxX4/njR9Mow","user_person_FK":1,"_id":2}

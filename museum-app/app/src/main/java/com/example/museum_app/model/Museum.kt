@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.util.Log
 import com.example.museum_app.adapter.MuseumHttpAdapter
+import com.example.museum_app.view.MainActivity
 
 class Museum(
     var id : Int,
@@ -21,7 +22,7 @@ class Museum(
    var image : String
 
     init {
-        image = "http://192.168.0.8:1337/picture?id=$id"
+        image = "${MainActivity.url}/picture?id=$id"
     }
 
 

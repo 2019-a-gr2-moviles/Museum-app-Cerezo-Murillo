@@ -41,7 +41,7 @@ class EventView : AppCompatActivity() {
     fun goToEventDetail(eventId:Int){
         val intentExplicito = Intent(
             this,
-            EventView::class.java
+            EventDetailView::class.java
         )
         intentExplicito.putExtra("museumId",museumId)
         intentExplicito.putExtra("eventId",eventId)
