@@ -4,6 +4,7 @@ import android.os.AsyncTask
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.museum_app.model.User
+import com.example.museum_app.view.MainActivity
 import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
 
@@ -41,6 +42,6 @@ class UserHttpAdapter : AsyncTask<String, Integer, User?>(){
         return usuario
     }
 
-    val url = "http://192.168.0.8:1337/login"
+    val url = "${MainActivity.url}/login"
 
 }

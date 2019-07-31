@@ -3,6 +3,7 @@ package com.example.museum_app.adapter
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.museum_app.model.Person
+import com.example.museum_app.view.MainActivity
 import com.github.kittinunf.fuel.core.Parameters
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.fuel.httpPost
@@ -10,7 +11,7 @@ import com.github.kittinunf.result.Result
 
 class PersonHttpAdapter {
 
-    val url = "http://192.168.0.8:1337"
+    val url = MainActivity.url
 
     fun getPersonById (id : Int) : Person? {
         var currentUrl = "$url/Person/$id"
