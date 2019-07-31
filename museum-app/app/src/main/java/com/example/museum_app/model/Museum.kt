@@ -14,7 +14,8 @@ class Museum(
     var phoneNumber : String,
     var tags : String,
     var longitude : String,
-    var latitude : String
+    var latitude : String,
+    var events : ArrayList<Event>
 ) {
 
    var image : String

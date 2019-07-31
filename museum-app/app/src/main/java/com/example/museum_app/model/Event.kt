@@ -1,9 +1,21 @@
 package com.example.museum_app.model
 
 class Event(
-    var eventImage:Int,
-    var eventName: String,
-    var eventDate:String,
-    var eventBusinessHours:String
+    var id : Int,
+    var name: String,
+    var dateStart:String,
+    var timeStart:String,
+    var endDate : String,
+    var endTime : String,
+    var description : String,
+    var longitude : String,
+    var latitude : String
 ) {
+
+    var image : String
+
+    init {
+        image = "http://192.168.0.8:1337/pictureEvent?id=$id"
+    }
+
 }

@@ -37,6 +37,9 @@ module.exports = {
     },
     museum_event_FK : {
       model : 'museum'
+    },
+    picFD : {
+      type : 'string'
     }
 
   },

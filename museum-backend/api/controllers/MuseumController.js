@@ -14,6 +14,7 @@ module.exports = {
             museums = await Museum.find()
                 .populate('museum_information_FK')
                 .populate('museum_location_FK')
+                .populate('events')
             const museumsList = []
             Object.entries(museums).forEach(element => {
                 var newMuseum = 
@@ -26,7 +27,8 @@ module.exports = {
                         "phoneNumber" : element[1].museum_information_FK.phoneNumber,
                         "tags" : element[1].museum_information_FK.tags,
                         "longitude" : element[1].museum_location_FK.longitude,
-                        "latitude" : element[1].museum_location_FK.latitude
+                        "latitude" : element[1].museum_location_FK.latitude,
+                        "events" : element[1].events
                     }
                 
                 museumsList.push(newMuseum)
@@ -86,9 +88,7 @@ module.exports = {
             maxBytes : 10000000,
             dirname : __dirname + '/../../files',
         }
-        console.log(req.param('id'))
         Museum.findOne(req.param('id')).exec(function (err, museum){
-            console.log(museum)
           if (err) return res.serverError(err);
           if (!museum) return res.notFound();
       

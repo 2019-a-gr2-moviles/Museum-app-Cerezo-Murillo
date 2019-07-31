@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.museum_app.model.Museum
+import com.example.museum_app.view.MainActivity
 import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
@@ -15,7 +16,7 @@ import java.io.InputStream
 
 class MuseumHttpAdapter {
 
-   val url = "http://192.168.0.8:1337"
+   val url = MainActivity.url
 
     fun getAll() : List<Museum>? {
         var currentUrl = "$url/allMuseums"

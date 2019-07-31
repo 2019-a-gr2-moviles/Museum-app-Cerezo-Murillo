@@ -19,6 +19,12 @@ module.exports.routes = {
   },
   'GET /allEvents/:museumId' : {
     action : 'event/listAll'
+  },
+  'POST /pictureEvent' : {
+    action : 'event/upload'
+  },
+  'GET /pictureEvent' : {
+    action : 'event/getPic'
   }
 
 };
