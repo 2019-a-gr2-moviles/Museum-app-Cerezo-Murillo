@@ -2,9 +2,9 @@ package com.example.museum_app.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat.startActivity
-import android.support.v7.widget.RecyclerView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat.startActivity
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -20,10 +20,10 @@ import com.example.museum_app.view.MuseumView
 
 class MuseumAdapter(private val museumList: List<Museum>,
                     private val context: MuseumView,
-                    private val recyclerView: RecyclerView
-) : RecyclerView.Adapter<MuseumAdapter.MyViewHolder>() {
+                    private val recyclerView: androidx.recyclerview.widget.RecyclerView
+) : androidx.recyclerview.widget.RecyclerView.Adapter<MuseumAdapter.MyViewHolder>() {
 
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
 
         var museumNameTextView: TextView
         var museumBusinessHoursTextView: TextView
@@ -42,11 +42,9 @@ class MuseumAdapter(private val museumList: List<Museum>,
             museumImageView = view.findViewById(R.id.imageMuseum) as ImageView
             museumEventButton = view.findViewById(R.id.btnMuseumEvents)
             museumAddressButton = view.findViewById(R.id.btnMuseumAddress)
-
-            museumEventButton.setOnClickListener {
-                context.goToEvents()
-            }
             museumly = view.findViewById(R.id.lyMuseum)
+
+
 
         }
 
@@ -70,6 +68,14 @@ class MuseumAdapter(private val museumList: List<Museum>,
         myViewHolder.museumly.setOnClickListener {
             Log.i("museumId", position.toString())
             context.gotToMuseumDetail(position)
+        }
+
+        myViewHolder.museumEventButton.setOnClickListener {
+            context.goToEvents(position)
+        }
+
+        myViewHolder.museumAddressButton.setOnClickListener {
+            context.goToMuseumAddress(Museum.museums[position].latitude, Museum.museums[position].longitude,Museum.museums[position].name )
         }
 
     }

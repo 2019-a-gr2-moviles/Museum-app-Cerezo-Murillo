@@ -15,7 +15,7 @@ import java.io.InputStream
 
 class MuseumHttpAdapter {
 
-    val url = "http://192.168.0.8:1337"
+   val url = "http://192.168.0.8:1337"
 
     fun getAll() : List<Museum>? {
         var currentUrl = "$url/allMuseums"

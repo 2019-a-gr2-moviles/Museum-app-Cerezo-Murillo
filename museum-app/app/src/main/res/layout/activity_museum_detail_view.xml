@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".view.MuseumDetailView">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#2660A4"
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp" android:layout_marginBottom="20dp">
             <TextView
                     android:text="Museum Name"
                     android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent" android:layout_marginBottom="10dp">
                 <TextView
                         android:text="Precio:"
                         android:layout_width="wrap_content"
@@ -56,7 +56,8 @@
                         android:text="This is the price of the entrance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txtPriceMuseumDetail" android:textColorLink="#13315C" android:textColor="#13315C"
+                        android:id="@+id/txtPriceMuseumDetail" android:textColorLink="#13315C"
+                        android:textColor="#13315C"
                         android:textSize="16sp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"/>
                 <TextView
@@ -70,7 +71,8 @@
                         android:text="Lunes martes mierocles jueve"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/txtBusinessHoursMuseumDetail" android:textColorLink="#13315C" android:textColor="#13315C"
+                        android:id="@+id/txtBusinessHoursMuseumDetail" android:textColorLink="#13315C"
+                        android:textColor="#13315C"
                         android:textSize="16sp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"/>
                 <TextView
@@ -111,11 +113,17 @@
                     <Button
                             android:text="Dirección"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/btnAddressMuseumDetail" android:layout_weight="1"
+                            android:layout_height="wrap_content" android:id="@+id/btnAddressMuseumDetail"
+                            android:layout_weight="1"
                             android:backgroundTint="#13315C" android:textColor="#7BDFF2"
                             android:drawableLeft="@drawable/placeholder32" android:layout_marginRight="10dp"/>
                 </LinearLayout>
             </LinearLayout>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/btnStartJourney"
+                    android:text="Iniciar Paseo" android:backgroundTint="#13315C" android:textColor="#7BDFF2"
+                    android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,7 @@
 package com.example.museum_app.view
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.example.museum_app.R
@@ -21,7 +21,7 @@ class MuseumDetailView : AppCompatActivity() {
         }
 
         btnAddressMuseumDetail.setOnClickListener {
-            goToMuseumInMap(Museum.museums[museumId].latitude,Museum.museums[museumId].longitude)
+            goToMuseumInMap(Museum.museums[museumId].latitude,Museum.museums[museumId].longitude,Museum.museums[museumId].name)
         }
     }
 
@@ -46,13 +46,14 @@ class MuseumDetailView : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
-    fun goToMuseumInMap(museumLat:String, museumLong:String){
-//        val intentExplicito = Intent(
-//            this,
-//            EventView::class.java
-//        )
-//        intentExplicito.putExtra("museumLat",museumLat)
-//        intentExplicito.putExtra("museumLong",museumLong)
-//        startActivity(intentExplicito)
+    fun goToMuseumInMap(museumLat:String, museumLong:String,museumName:String){
+        val intentExplicito = Intent(
+           this,
+            MuseumAddressMapsActivity::class.java
+        )
+        intentExplicito.putExtra("museumLat",museumLat)
+        intentExplicito.putExtra("museumLong",museumLong)
+        intentExplicito.putExtra("museumName",museumName)
+       startActivity(intentExplicito)
     }
 }

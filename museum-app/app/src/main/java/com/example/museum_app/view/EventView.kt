@@ -1,10 +1,10 @@
 package com.example.museum_app.view
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.museum_app.adapter.EventAdapter
 import com.example.museum_app.R
 import com.example.museum_app.model.Event
@@ -54,16 +54,21 @@ class EventView : AppCompatActivity() {
     }
 
 
-    fun startRecyclerView(list: ArrayList<Event>, activity: EventView, recycler_view: RecyclerView){
+    fun startRecyclerView(list: ArrayList<Event>, activity: EventView, recycler_view: androidx.recyclerview.widget.RecyclerView){
         val eventAdapter = EventAdapter(
             list,
             activity,
             recycler_view
         )
         recycler_view.adapter = eventAdapter
-        recycler_view.itemAnimator = DefaultItemAnimator()
-        recycler_view.layoutManager = LinearLayoutManager(activity)
+        recycler_view.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        recycler_view.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(activity)
 
 
     }
+
+    fun goToEventDetail(eventId:Int){
+
+    }
+
 }
