@@ -49,6 +49,9 @@ class EventAdapter(private val eventList: ArrayList<Event>,
         myViewHolder.eventDateTextView.text = event.eventDate
         myViewHolder.eventBusinessHoursTextView.text = event.eventBusinessHours
         myViewHolder.eventImageView.setImageResource(event.eventImage)
+        myViewHolder.eventLy.setOnClickListener {
+            context.goToEventDetail(position)
+        }
 
     }
 

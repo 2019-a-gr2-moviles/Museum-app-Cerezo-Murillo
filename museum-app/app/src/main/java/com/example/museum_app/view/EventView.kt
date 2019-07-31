@@ -1,5 +1,6 @@
 package com.example.museum_app.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -12,9 +13,11 @@ import kotlinx.android.synthetic.main.activity_event_view.*
 
 class EventView : AppCompatActivity() {
 
+    var museumId:Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_view)
+        museumId = intent.getIntExtra("museumId",0)
         val lista = arrayListOf<Event>()
         val recyclerView = rvEvents
         lista.add(
@@ -68,7 +71,13 @@ class EventView : AppCompatActivity() {
     }
 
     fun goToEventDetail(eventId:Int){
-
+        val intentExplicito = Intent(
+            this,
+            EventView::class.java
+        )
+        intentExplicito.putExtra("museumId",museumId)
+        intentExplicito.putExtra("eventId",eventId)
+        startActivity(intentExplicito)
     }
 
 }

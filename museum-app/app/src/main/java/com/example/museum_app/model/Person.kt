@@ -9,8 +9,7 @@ class Person (
     var lastName : String,
     var emailAddress : String,
     var createdAt : Long,
-    var updatedAt: Long,
-    var usuer_person_FK : Int
+    var updatedAt: Long
 ) {
 
     companion object{
