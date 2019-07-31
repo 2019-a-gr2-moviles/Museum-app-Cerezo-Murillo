@@ -14,15 +14,11 @@ class Person (
 
     companion object{
         var currentPerson : Person? = null
-        private var adapter = PersonHttpAdapter()
+        var adapter = PersonHttpAdapter()
 
         fun updateCurrentPerson(id : Int){
             adapter.getPersonById(id)
         }
-    }
-
-    fun signup(data : Parameters){
-        adapter.newPerson(data)
     }
 
 }

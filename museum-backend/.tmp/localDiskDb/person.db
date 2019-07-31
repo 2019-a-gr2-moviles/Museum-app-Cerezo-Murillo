@@ -1,2 +1,4 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"createdAt":1564593150011,"updatedAt":1564593171197,"id":1,"name":"Admin","lastName":"Admin","emailAddress":"jose719810@hotmail.com","user_person_FK":2,"_id":1}
+{"name":"Johanna ","lastName":"Cerezo","emailAddress":"caro.cerezor@gmail.com","createdAt":1564599185878,"updatedAt":1564599185878,"id":2,"user_person_FK":null,"_id":2}
+{"name":"PaulA","lastName":"Cerezo","emailAddress":"pc@hotmail.com","createdAt":1564599533979,"updatedAt":1564599533979,"id":3,"user_person_FK":null,"_id":3}

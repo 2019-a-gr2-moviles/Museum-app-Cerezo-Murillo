@@ -3,9 +3,11 @@ package com.example.museum_app.adapter
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.museum_app.model.Person
+import com.example.museum_app.model.User
 import com.example.museum_app.view.MainActivity
 import com.github.kittinunf.fuel.core.Parameters
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPatch
 import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
 
@@ -35,20 +37,44 @@ class PersonHttpAdapter {
         return personToReturn
     }
 
-    fun newPerson(body : Parameters){
+    fun register(bodyClient : Parameters, userName : String, password : String){
         var currentUrl = "$url/Person"
         currentUrl
-            .httpPost(body)
+            .httpPost(bodyClient)
             .responseString{ request, response, result ->
                 when(result){
                     is Result.Failure -> {
-                        var ex = result.getException()
-                        Log.i("testingxd", "$ex")
+                        val ex = result.getException()
+                        Log.i("httpError", "$ex")
                     }
                     is Result.Success -> {
                         var data = result.get()
-                        var personToReturn = Klaxon().parse<Person>(data)
-                        Person.currentPerson = personToReturn
+                        var newClient = Klaxon().parse<Person>(data)
+                        Person.currentPerson = newClient
+                        var userParameters = listOf(
+                            "userName" to userName,
+                            "password" to password,
+                            "user_person_FK" to newClient?.id
+                        )
+                        User.adapter.register(userParameters)
+                    }
+                }
+
+            }
+    }
+
+    fun updateClient(body : Parameters, id : Int) {
+        var currentUrl = "$url/Person/$id"
+        currentUrl
+            .httpPatch(body)
+            .responseString { request, response, result ->
+                when(result){
+                    is Result.Failure -> {
+                        var ex = result.getException()
+                        Log.i("httpError", "$ex")
+                    }
+                    is Result.Success -> {
+                        Log.i("testingxd", "Success")
                     }
                 }
 
