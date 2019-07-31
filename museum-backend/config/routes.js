@@ -16,6 +16,9 @@ module.exports.routes = {
   },
   'POST /login' : {
     action : 'user/login'
+  },
+  'GET /allEvents/:museumId' : {
+    action : 'event/listAll'
   }
 
 };
