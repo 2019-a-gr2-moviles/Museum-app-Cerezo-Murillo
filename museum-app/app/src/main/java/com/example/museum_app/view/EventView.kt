@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.museum_app.adapter.EventAdapter
 import com.example.museum_app.R
 import com.example.museum_app.model.Event
+import com.example.museum_app.model.Museum
 import kotlinx.android.synthetic.main.activity_event_view.*
 
 class EventView : AppCompatActivity() {
@@ -18,41 +19,8 @@ class EventView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event_view)
         museumId = intent.getIntExtra("museumId",0)
-        val lista = arrayListOf<Event>()
         val recyclerView = rvEvents
-        lista.add(
-            Event(
-                R.drawable.musuem3,
-                "Viaje al pasado",
-                "13 - 25 Julio",
-                "9 am - 4pm"
-            )
-        )
-        lista.add(
-            Event(
-                R.drawable.musuem3,
-                "Viaje al fututo",
-                "25 - 30 Julio",
-                "9 am - 4pm"
-            )
-        )
-        lista.add(
-            Event(
-                R.drawable.museum2,
-                "Con los incas",
-                "18 - 15 Julio",
-                "9 am - 4pm"
-            )
-        )
-        lista.add(
-            Event(
-                R.drawable.museum2,
-                "Con los incas",
-                "18 - 15 Julio",
-                "9 am - 4pm"
-            )
-        )
-        startRecyclerView(lista,this,recyclerView)
+        startRecyclerView(Museum.museums[museumId].events,this,recyclerView)
 
     }
 

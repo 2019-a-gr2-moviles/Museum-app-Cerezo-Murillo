@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
 
     companion object{
-        val url = "http://172.29.65.97:1337"
+        val url = "http://192.168.43.68:1337"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

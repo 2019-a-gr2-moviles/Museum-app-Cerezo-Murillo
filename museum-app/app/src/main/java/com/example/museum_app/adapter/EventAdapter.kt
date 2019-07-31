@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.bumptech.glide.Glide
 import com.example.museum_app.R
 import com.example.museum_app.model.Event
 import com.example.museum_app.view.EventView
@@ -45,10 +46,10 @@ class EventAdapter(private val eventList: ArrayList<Event>,
 
         val event = eventList[position]
 
-        myViewHolder.eventNameTextView.text = event.eventName
-        myViewHolder.eventDateTextView.text = event.eventDate
-        myViewHolder.eventBusinessHoursTextView.text = event.eventBusinessHours
-        myViewHolder.eventImageView.setImageResource(event.eventImage)
+        myViewHolder.eventNameTextView.text = event.name
+        myViewHolder.eventDateTextView.text = "${event.dateStart} a ${event.endDate}"
+        myViewHolder.eventBusinessHoursTextView.text = "${event.timeStart} a ${event.endTime}"
+        Glide.with(context).load(event.image).into(myViewHolder.eventImageView)
         myViewHolder.eventLy.setOnClickListener {
             context.goToEventDetail(position)
         }

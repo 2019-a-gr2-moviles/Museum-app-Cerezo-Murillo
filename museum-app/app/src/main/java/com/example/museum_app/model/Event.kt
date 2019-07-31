@@ -7,9 +7,7 @@ class Event(
     var timeStart:String,
     var endDate : String,
     var endTime : String,
-    var description : String,
-    var longitude : String,
-    var latitude : String
+    var description : String
 ) {
 
     var image : String
