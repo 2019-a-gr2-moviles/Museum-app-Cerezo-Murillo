@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <Button
-                    android:text="Events"
+                    android:text="Eventos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/btnMuseumEvents" android:layout_weight="1"
                     android:drawableLeft="@drawable/event32" android:backgroundTint="#13315C"
@@ -46,7 +46,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:layout_weight="1"/>
             <Button
-                    android:text="Address"
+                    android:text="Dirección"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/btnMuseumAddress" android:layout_weight="1"
                     android:drawableLeft="@drawable/placeholder32" android:textColor="#7BDFF2"

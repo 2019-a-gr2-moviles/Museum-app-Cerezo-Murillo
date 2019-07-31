@@ -1,6 +1,11 @@
 package com.example.museum_app.adapter
 
+import android.content.Context
+import android.content.Intent
+import android.support.constraint.ConstraintLayout
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +15,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.museum_app.R
 import com.example.museum_app.model.Museum
+import com.example.museum_app.view.EventView
 import com.example.museum_app.view.MuseumView
 
 class MuseumAdapter(private val museumList: List<Museum>,
@@ -25,6 +31,7 @@ class MuseumAdapter(private val museumList: List<Museum>,
         var museumImageView: ImageView
         var museumEventButton: Button
         var museumAddressButton : Button
+        var museumly : ConstraintLayout
 
 
         init {
@@ -39,6 +46,7 @@ class MuseumAdapter(private val museumList: List<Museum>,
             museumEventButton.setOnClickListener {
                 context.goToEvents()
             }
+            museumly = view.findViewById(R.id.lyMuseum)
 
         }
 
@@ -59,6 +67,10 @@ class MuseumAdapter(private val museumList: List<Museum>,
         myViewHolder.museumBusinessDaysTextView.text = museum.businessDays
         myViewHolder.museumBusinessHoursTextView.text = museum.businessHours
         Glide.with(context).load(museum.image).into(myViewHolder.museumImageView)
+        myViewHolder.museumly.setOnClickListener {
+            Log.i("museumId", position.toString())
+            context.gotToMuseumDetail(position)
+        }
 
     }
 
@@ -77,6 +89,9 @@ class MuseumAdapter(private val museumList: List<Museum>,
 
         return MyViewHolder(itemView)
     }
+
+
+
 
 
 }
