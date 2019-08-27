@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Museum.refreshList()
+        //Museum.refreshList()
 
         btn_to_login.setOnClickListener {
             goToLoginActivity()
