@@ -18,12 +18,12 @@ class EventDetailView : AppCompatActivity() {
 
 
     fun fillEventInformation(idEvent:Int, idMuseum:Int){
-        txtMuseumNameEventDetail.text // =Museum.museums[idMuseum]
-        txtNameEventDetail.text
-        txtBusinessDaysEventDetail.text
-        txtBusinessHoursEventDetail.text
-        txtDescriptionEventDetail.text
-        txtPriceEventDetail.text
+        txtMuseumNameEventDetail.text = Museum.museums[idMuseum].name
+        txtNameEventDetail.text = Museum.museums[idMuseum].events[idEvent].name
+        txtBusinessDaysEventDetail.text = Museum.museums[idMuseum].events[idEvent].dateStart + " al " + Museum.museums[idMuseum].events[idEvent].endDate
+        txtBusinessHoursEventDetail.text = Museum.museums[idMuseum].events[idEvent].timeStart + " al " + Museum.museums[idMuseum].events[idEvent].timeStart
+        txtDescriptionEventDetail.text = Museum.museums[idMuseum].events[idEvent].description
+        txtPriceEventDetail.text = "$8.99"
 
     }
 }

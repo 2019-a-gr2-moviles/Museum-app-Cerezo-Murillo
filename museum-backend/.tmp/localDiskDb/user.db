@@ -1,4 +1,4 @@
 {"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
 {"$$indexCreated":{"fieldName":"userName","unique":true,"sparse":false}}
-{"createdAt":1564593115356,"updatedAt":1564596432227,"id":2,"userName":"admin","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$Nwo6NvYI6Gwtf+3n$Leu/Y1YBQlzZOw==$7SqhBgUTHTFTp57PkTCACQ","user_person_FK":1,"_id":2}
-{"userName":"Pccerezo","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$n9MpcEwGGudiJAlU$LLc553QEkEcwZQ==$odrfM/UCvAib69xcW7uTvg","user_person_FK":3,"createdAt":1564599534529,"updatedAt":1564599534529,"id":3,"_id":3}
+{"createdAt":1564593115356,"updatedAt":1564596432227,"id":2,"userName":"admin","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$mzPKwfe2yuYeCCfF$XIVE89xlI19fmw==$drAUnpobaReYQqTHaRPRiw","user_person_FK":1,"_id":2}
+{"createdAt":1564599534529,"updatedAt":1564599534529,"id":3,"userName":"Pccerezo","password":"YWVzLTI1Ni1nY20kJGRlZmF1bHQ=$AI0C85cZGzAEenfg$1K6+1+fxY2ExGg==$4EqS65Z2O2mtuPUsoFb3nQ","user_person_FK":3,"_id":3}
